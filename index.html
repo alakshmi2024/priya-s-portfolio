@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio Website</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">Portfolio</a>
+
+      <div id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </div>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / BANNER -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Hello, I'm <span>John Doe</span></h1>
+        <p class="sub">Front End Developer &amp; Designer</p>
+        <a href="#about" class="btn">About Me</a>
+      </div>
+
+      <div class="hero-image">
+        <!-- placeholder image -->
+        <img src="https://picsum.photos/seed/hero/800/600" alt="Hero image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="heading">
+        <h2>About Me</h2>
+        <p class="heading-sub">A short introduction about who I am and what I do.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>I'm a Front End Web Developer</h3>
+          <p>I create visually appealing and user-friendly websites and web apps. I focus on writing clean, modular code and building accessible, responsive experiences. My toolkit includes HTML, CSS, JavaScript, and modern frameworks when needed.</p>
+
+          <ul class="skills-list">
+            <li>HTML5 &amp; Semantic Markup</li>
+            <li>CSS3, Flexbox &amp; Grid</li>
+            <li>JavaScript (ES6+), DOM</li>
+            <li>Responsive Design &amp; Accessibility</li>
+          </ul>
+
+          <a href="#contact" class="btn outline">Hire Me</a>
+        </div>
+
+        <div class="about-image">
+          <img src="https://picsum.photos/seed/about/600/600" alt="About image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="heading">
+        <h2>Services</h2>
+        <p class="heading-sub">What I offer</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><img src="https://picsum.photos/seed/icon1/120/120" alt="icon"></div>
+          <h3>Web Design</h3>
+          <p>Beautiful, responsive designs focused on clarity and conversion.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><img src="https://picsum.photos/seed/icon2/120/120" alt="icon"></div>
+          <h3>Web Development</h3>
+          <p>Production-ready front-end development with performance in mind.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><img src="https://picsum.photos/seed/icon3/120/120" alt="icon"></div>
+          <h3>UI/UX Consulting</h3>
+          <p>Improving usability, wireframes and interaction design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="heading">
+        <h2>Latest Work</h2>
+        <p class="heading-sub">A selection of projects I have built recently</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="https://picsum.photos/seed/work1/800/600" alt="Work 1"></div>
+        <div class="portfolio-item"><img src="https://picsum.photos/seed/work2/800/600" alt="Work 2"></div>
+        <div class="portfolio-item"><img src="https://picsum.photos/seed/work3/800/600" alt="Work 3"></div>
+        <div class="portfolio-item"><img src="https://picsum.photos/seed/work4/800/600" alt="Work 4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="heading">
+        <h2>Contact</h2>
+        <p class="heading-sub">Get in touch — I'd love to hear about your project</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</p>
+          <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+          <p><i class="fas fa-envelope"></i> hello@example.com</p>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <label>
+              <input type="text" name="name" placeholder="Full name" required>
+            </label>
+            <label>
+              <input type="email" name="email" placeholder="Email address" required>
+            </label>
+            <label>
+              <textarea name="message" placeholder="Your message" required></textarea>
+            </label>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 John Doe. All Rights Reserved.</p>
+      <div class="social">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
