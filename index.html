@@ -2,181 +2,236 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Portfolio Website</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priya's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Header / Navigation -->
-  <header>
-    <div class="nav-container">
-      <a href="#" class="logo">Portfolio</a>
-
-      <div id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </div>
-
-      <nav class="nav">
-        <ul class="menu">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <h2 class="logo">Priya</h2>
+        <div class="menu-icons">
+          <i class="fas fa-times" id="close-menu" onclick="closeMenu()"></i>
+          <i class="fas fa-bars" id="open-menu" onclick="openMenu()"></i>
+        </div>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <div class="header-text">
+        <p>MCA Student</p>
+        <h1>Hi, I'm <span>Annepureddy Lakshmi Priya</span></h1>
+      </div>
     </div>
   </header>
 
-  <!-- HERO / BANNER -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <h1>Hello, I'm <span>John Doe</span></h1>
-        <p class="sub">Front End Developer &amp; Designer</p>
-        <a href="#about" class="btn">About Me</a>
-      </div>
-
-      <div class="hero-image">
-        <!-- placeholder image -->
-        <img src="https://picsum.photos/seed/hero/800/600" alt="Hero image">
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <div id="about">
     <div class="container">
-      <div class="heading">
-        <h2>About Me</h2>
-        <p class="heading-sub">A short introduction about who I am and what I do.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <h3>I'm a Front End Web Developer</h3>
-          <p>I create visually appealing and user-friendly websites and web apps. I focus on writing clean, modular code and building accessible, responsive experiences. My toolkit includes HTML, CSS, JavaScript, and modern frameworks when needed.</p>
-
-          <ul class="skills-list">
-            <li>HTML5 &amp; Semantic Markup</li>
-            <li>CSS3, Flexbox &amp; Grid</li>
-            <li>JavaScript (ES6+), DOM</li>
-            <li>Responsive Design &amp; Accessibility</li>
-          </ul>
-
-          <a href="#contact" class="btn outline">Hire Me</a>
+      <div class="row">
+        <div class="about-col-1">
+          <img src="priya image.jpg" alt="Nisha" style="width: 100%; max-width: 300px; border-radius: 10px;">
         </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Energetic and passionate college student pursuing MCA, An enthusiastic fresher who is self-starter and capable to use technical skills for the betterment of the organization. Aim to use knowledge continuously learning and growing in the field of software development, a focused and goal-oriented engineering professional with zeal to make a winning career in software development.</p>
+          
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('strengths')">Strengths</p>
+            <p class="tab-links" onclick="opentab('languages')">Languages</p>
+            <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+            <p class="tab-links" onclick="opentab('technology')">Technology</p>
+          </div>
 
-        <div class="about-image">
-          <img src="https://picsum.photos/seed/about/600/600" alt="About image">
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Python Programming</span></li>
+              <li><span>HTML & CSS</span></li>
+              <li><span>Basics of Django</span></li>
+              <li><span>Basics of DBMS</span></li>
+              <li><span>Git & GitHub</span></li>
+              <li><span>Basics of C</span></li>
+            </ul>
+          </div>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="heading">
-        <h2>Services</h2>
-        <p class="heading-sub">What I offer</p>
-      </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2024-2026</span><br>Persuing MCA at Vikramasimhapuri University,Nellore</li>
+              <li><span>2021-2024</span><br>Degree at K.V.S.R Degree College, Allagadda</li>
+              <li><span>2019-2021</span><br>Intermediate at K.V.S.R Junior College, Allagadda</li>
+              <li><span>2019</span><br>SSC at Sri Vignana Bharathi School, Allagadda</li>
+            </ul>
+          </div>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><img src="https://picsum.photos/seed/icon1/120/120" alt="icon"></div>
-          <h3>Web Design</h3>
-          <p>Beautiful, responsive designs focused on clarity and conversion.</p>
-        </div>
+          <div class="tab-contents" id="strengths">
+            <ul>
+              <li><span>Self-Motivation</span></li>
+              <li><span>Positive Attitude</span></li>
+              <li><span>Confidence</span></li>
+              <li><span>Positive thinking approach</span></li>
+            </ul>
+          </div>
 
-        <div class="service-card">
-          <div class="service-icon"><img src="https://picsum.photos/seed/icon2/120/120" alt="icon"></div>
-          <h3>Web Development</h3>
-          <p>Production-ready front-end development with performance in mind.</p>
-        </div>
+          <div class="tab-contents" id="languages">
+            <ul>
+              <li><span>Telugu</span></li>
+              <li><span>English</span></li>
+            </ul>
+          </div>
 
-        <div class="service-card">
-          <div class="service-icon"><img src="https://picsum.photos/seed/icon3/120/120" alt="icon"></div>
-          <h3>UI/UX Consulting</h3>
-          <p>Improving usability, wireframes and interaction design.</p>
+          <div class="tab-contents" id="hobbies">
+            <ul>
+              <li><span>Reading Books</span></li>
+              <li><span>Watching TV</span></li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="technology">
+            <ul>
+              <li><span>Figma</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- PORTFOLIO -->
-  <section class="portfolio" id="portfolio">
+  <div id="Certificates">
     <div class="container">
-      <div class="heading">
-        <h2>Latest Work</h2>
-        <p class="heading-sub">A selection of projects I have built recently</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <div class="portfolio-item"><img src="https://picsum.photos/seed/work1/800/600" alt="Work 1"></div>
-        <div class="portfolio-item"><img src="https://picsum.photos/seed/work2/800/600" alt="Work 2"></div>
-        <div class="portfolio-item"><img src="https://picsum.photos/seed/work3/800/600" alt="Work 3"></div>
-        <div class="portfolio-item"><img src="https://picsum.photos/seed/work4/800/600" alt="Work 4"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="heading">
-        <h2>Contact</h2>
-        <p class="heading-sub">Get in touch — I'd love to hear about your project</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Contact Info</h3>
-          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</p>
-          <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-          <p><i class="fas fa-envelope"></i> hello@example.com</p>
+      <h1 class="sub-title">My Certificates</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src= "images/Oracle.jpg" alt="Oracle Certificate">
+          <div class="layer">
+            <h3>Oracle</h3>
+            <p>This Certification belongs to Oracle course provided by Oracle University.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/GDSC.jpeg" alt="GDSC Certificate">
+          <div class="layer">
+            <h3>GDSC</h3>
+            <p>This Certification belongs to GDSC where we can explore our knowledge.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/ibm.jpeg" alt="IBM Certificate">
+          <div class="layer">
+            <h3>IBM</h3>
+            <p>This Certification belongs to AI provided by IBM company.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/ibm1.jpeg" alt="IBM Course Certificate">
+          <div class="layer">
+            <h3>IBM (Coursera)</h3>
+            <p>This Certification belongs to AI provided by Coursera.</p>
+          </div>
         </div>
 
-        <div class="contact-form">
-          <form id="contactForm">
-            <label>
-              <input type="text" name="name" placeholder="Full name" required>
-            </label>
-            <label>
-              <input type="email" name="email" placeholder="Email address" required>
-            </label>
-            <label>
-              <textarea name="message" placeholder="Your message" required></textarea>
-            </label>
-            <button type="submit" class="btn">Send Message</button>
+        <div class="work">
+          <img src= "images/cloud computing.jpeg" alt="Cloud Certificate">
+          <div class="layer">
+            <h3>Cloud computing</h3>
+            <p>This Certification belongs to Cloud computing provided by Infosys springboard.</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/NPTEL.jpeg" alt="NPTEL Certificate">
+          <div class="layer">
+            <h3>NPTEL</h3>
+            <p>This Certification belongs to Computer Architecture.</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/Uipath.jpeg" alt="UiPath Certificate">
+          <div class="layer">
+            <h3>Uipath</h3>
+            <p>This certificate belongs to Uipath which helps to build skills.</p>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src= "images/edx course.jpg" alt="Edx Certificate">
+          <div class="layer">
+            <h3>Edx</h3>
+            <p>This Certification belongs to Communication and Team work.</p>
+          </div>
+        </div>
+
+        
+      </div>
+      <a href="#" class="btn">See More</a>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> alakshmi2024@gmail.com</p>
+          <p><i class="fa-solid fa-phone-volume"></i> 7396316559</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-square-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="Lakshmi Priya Annepureddy-Resume.pdf" download class="btn btn2">Download Resume</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
           </form>
+          <span id="msg"></span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
-      <p>© 2025 John Doe. All Rights Reserved.</p>
-      <div class="social">
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      </div>
+    <div class="copyright">
+      <p>&copy; 2024–2026 Annepureddy Lakshmi Priya</p>
     </div>
-  </footer>
+  </div>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+  <script>
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    function openMenu() {
+      document.getElementById("sidemenu").style.right = "0";
+    }
+
+    function closeMenu() {
+      document.getElementById("sidemenu").style.right = "-200px";
+    }
+  </script>
 </body>
 </html>
+
+
+
+
+
+
